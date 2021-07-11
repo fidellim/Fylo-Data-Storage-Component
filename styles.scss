@@ -20,6 +20,203 @@ $veryDarkBlue: hsl(229, 57%, 11%);
 }
 
 body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font-size: 14px;
 	font-family: $raleway;
+	background: url("./images/bg-mobile.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+// BEM Convention
+.component {
+	max-width: 500px;
+	width: 100%;
+	margin: 0 1.5rem;
+	// margin: 2rem;
+}
+
+.container {
+	background-color: $darkBlue;
+	padding: 2rem;
+}
+
+// first container
+.container--curvedRight {
+	border-radius: 10px 100px 10px 10px;
+	margin-bottom: 1rem;
+}
+
+.container__logo {
+	margin-bottom: 1.5rem;
+}
+
+.features {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.featureContainer {
+	background-color: $veryDarkBlue;
+	margin-right: 1rem;
+	border-radius: 12px;
+	height: 52.5px;
+	width: 55px;
+	cursor: pointer;
+	position: relative;
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.featureContainer:hover {
+	transform: translateY(-5%);
+}
+
+// second container
+.container--normal {
+	position: relative;
+	border-radius: 10px;
+}
+
+.container__text {
+	color: $paleBlue;
+}
+
+.container__text--bold {
+	font-weight: 700;
+}
+
+.container__text--center {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.progBarContainer {
+	height: 1.25rem;
+	padding: 0.25rem;
+	border-radius: 12px;
+	margin-bottom: 0.75rem;
+	background-color: $veryDarkBlue;
+}
+
+.progBar {
+	position: relative;
+	height: 100%;
+	width: 60%;
+	padding: 0.25rem;
+	border-radius: 12px;
+	background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.progBar__circle {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 10px;
+	height: 70%;
+	border-radius: 50%;
+	background-color: white;
+	transform: translate(-20%, -50%);
+}
+
+.progBarTextContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.remainingStorage {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	padding: 1rem;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	max-width: 185px;
+	width: 100%;
+	transform: translate(-50%, 50%);
+}
+
+.remainingStorage__num {
+	font-size: 2.5rem;
+	color: $veryDarkBlue;
+	margin-right: 1rem;
+}
+
+.remainingStorage__text {
+	color: $grayishBlue;
+	font-weight: 700;
+}
+
+@media (min-width: 875px) {
+	html {
+		background-color: $veryDarkBlue;
+	}
+	body {
+		background: url("./images/bg-desktop.png"), linear-gradient($veryDarkBlue);
+		background-size: 100% 50%;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+	}
+	.component {
+		display: flex;
+		flex-direction: row;
+		max-width: 955px;
+		width: 100%;
+		margin: 0 1.5rem;
+	}
+
+	// first container
+	.container--curvedRight {
+		margin-bottom: 0rem;
+		margin-right: 1.5rem;
+	}
+	.features {
+		padding-right: 3rem;
+	}
+
+	// second container
+	.container--normal {
+		width: 100%;
+		max-width: 600px;
+		min-width: 500px;
+		align-self: flex-end;
+	}
+	.container__text--center {
+		text-align: left;
+	}
+	.progBarTextContainer {
+		margin-bottom: 0rem;
+	}
+	.remainingStorage {
+		border-radius: 7px 7px 0 7px;
+		bottom: auto;
+		top: 0;
+		left: auto;
+		right: 0;
+		padding: 0.75rem 1rem;
+		transform: translate(-20%, -75%);
+	}
+	.remainingStorage::before {
+		position: absolute;
+		content: "";
+		bottom: -19px;
+		right: 0;
+		border-top: 20px solid white;
+		border-left: 20px solid transparent;
+	}
 }
