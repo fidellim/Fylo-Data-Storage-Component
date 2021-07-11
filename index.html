@@ -10,11 +10,41 @@
 
 </head>
 <body>
-  You’ve used 815 GB of your storage
+  <div class="component">
+    <div class="container container--curvedRight">
+      <img class="container__logo" src="./images/logo.svg" alt="">
+      <div class="features">
+        <div class="featureContainer">
+          <img class="featureContainer__icon" src="./images/icon-document.svg" alt="">
+        </div>
+        <div class="featureContainer">
+          <img class="featureContainer__icon" src="./images/icon-folder.svg" alt="">
+        </div>
+        <div class="featureContainer">
+          <img class="featureContainer__icon" src="./images/icon-upload.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container container--normal">
+      <p class="container__text container__text--center">You’ve used <span id="usedStorage" class="container__text--bold">815 GB</span>  of your storage</p>
+      
+      <div class="progBarContainer">
+        <div class="progBar" id="progBar">
+          <div class="progBar__circle"></div>
+        </div>
+      </div>
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
+      <div class="progBarTextContainer">
+        <span class="container__text container__text--bold">0 GB</span>
+        <span id="totalStorage" class="container__text container__text--bold">1000 GB</span>
+      </div>
+
+      <div class="remainingStorage">
+        <h1 id="remainingStorageNum" class="remainingStorage__num">185</h1> <span class="remainingStorage__text">GB Left</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
