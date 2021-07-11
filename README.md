@@ -25,52 +25,49 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/Solution.png)
+![](./images/Solution-Mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/fidellim/Fylo-Data-Storage-Component)
+- Live Site URL: [Live Site](https://zen-noyce-7dca11.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SASS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I was able to practice the use of BEM convention.
 
 ```css
-.proud-of-this-css {
-	color: papayawhip;
+.container--normal {
+	width: 100%;
+	max-width: 600px;
+	min-width: 500px;
+	align-self: flex-end;
 }
-```
-
-```js
-const proudOfThisFunc = () => {
-	console.log("🎉");
-};
+.container__text--center {
+	text-align: left;
+}
+.progBarTextContainer {
+	margin-bottom: 0rem;
+}
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+To be able to be more familiar with BEM convention
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [BEM Convention](http://getbem.com/) - This is a guide for following the BEM convention for CSS.
 
 ## Author
 
